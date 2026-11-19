@@ -1,0 +1,29 @@
+# Python virtual environments & bytecode
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large data & model caches (keep data/curated/ tracked)
+data/raw/
+data/processed/
+data/parsed/
+models/
+.cache/
+*.bin
+*.pt
+*.pth
+*.safetensors
+*.model
+
+# OS / IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

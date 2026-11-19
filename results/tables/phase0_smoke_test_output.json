@@ -1,0 +1,968 @@
+[
+  {
+    "label": "MH Frame B (putting)",
+    "text": "דני מילא את המיכל במים",
+    "prediction": {
+      "text": "דני מילא את המיכל במים",
+      "tokens": [
+        {
+          "token": "דני",
+          "offsets": {
+            "start": 0,
+            "end": 3
+          },
+          "syntax": {
+            "word": "דני",
+            "dep_head_idx": 1,
+            "dep_func": "nsubj",
+            "dep_head": "מילא"
+          },
+          "seg": [
+            "דני"
+          ],
+          "lex": "דני",
+          "morph": {
+            "token": "דני",
+            "pos": "PROPN",
+            "feats": {},
+            "prefixes": [],
+            "suffix": false
+          }
+        },
+        {
+          "token": "מילא",
+          "offsets": {
+            "start": 4,
+            "end": 8
+          },
+          "syntax": {
+            "word": "מילא",
+            "dep_head_idx": -1,
+            "dep_func": "root",
+            "dep_head": "במים"
+          },
+          "seg": [
+            "מילא"
+          ],
+          "lex": "מילא",
+          "morph": {
+            "token": "מילא",
+            "pos": "VERB",
+            "feats": {
+              "Gender": "Masc",
+              "Number": "Sing",
+              "Person": "3",
+              "Tense": "Past"
+            },
+            "prefixes": [],
+            "suffix": false
+          }
+        },
+        {
+          "token": "את",
+          "offsets": {
+            "start": 9,
+            "end": 11
+          },
+          "syntax": {
+            "word": "את",
+            "dep_head_idx": 3,
+            "dep_func": "case:acc",
+            "dep_head": "המיכל"
+          },
+          "seg": [
+            "את"
+          ],
+          "lex": "את",
+          "morph": {
+            "token": "את",
+            "pos": "ADP",
+            "feats": {},
+            "prefixes": [],
+            "suffix": false
+          }
+        },
+        {
+          "token": "המיכל",
+          "offsets": {
+            "start": 12,
+            "end": 17
+          },
+          "syntax": {
+            "word": "המיכל",
+            "dep_head_idx": 1,
+            "dep_func": "obj",
+            "dep_head": "מילא"
+          },
+          "seg": [
+            "ה",
+            "מיכל"
+          ],
+          "lex": "מיכל",
+          "morph": {
+            "token": "המיכל",
+            "pos": "NOUN",
+            "feats": {
+              "Gender": "Masc",
+              "Number": "Sing"
+            },
+            "prefixes": [
+              "DET"
+            ],
+            "suffix": false
+          }
+        },
+        {
+          "token": "במים",
+          "offsets": {
+            "start": 18,
+            "end": 22
+          },
+          "syntax": {
+            "word": "במים",
+            "dep_head_idx": 1,
+            "dep_func": "obl",
+            "dep_head": "מילא"
+          },
+          "seg": [
+            "ב",
+            "מים"
+          ],
+          "lex": "מים",
+          "morph": {
+            "token": "במים",
+            "pos": "NOUN",
+            "feats": {
+              "Gender": "Masc",
+              "Number": "Plur"
+            },
+            "prefixes": [
+              "DET",
+              "ADP"
+            ],
+            "suffix": false
+          }
+        }
+      ],
+      "root_idx": 1,
+      "ner_entities": [
+        {
+          "phrase": "דני",
+          "label": "PER",
+          "start": 0,
+          "end": 3,
+          "token_start": 0,
+          "token_end": 0
+        }
+      ]
+    }
+  },
+  {
+    "label": "MH Frame A (putting)",
+    "text": "דני מילא מים במיכל",
+    "prediction": {
+      "text": "דני מילא מים במיכל",
+      "tokens": [
+        {
+          "token": "דני",
+          "offsets": {
+            "start": 0,
+            "end": 3
+          },
+          "syntax": {
+            "word": "דני",
+            "dep_head_idx": 1,
+            "dep_func": "nsubj",
+            "dep_head": "מילא"
+          },
+          "seg": [
+            "דני"
+          ],
+          "lex": "דני",
+          "morph": {
+            "token": "דני",
+            "pos": "PROPN",
+            "feats": {},
+            "prefixes": [],
+            "suffix": false
+          }
+        },
+        {
+          "token": "מילא",
+          "offsets": {
+            "start": 4,
+            "end": 8
+          },
+          "syntax": {
+            "word": "מילא",
+            "dep_head_idx": -1,
+            "dep_func": "root",
+            "dep_head": "במיכל"
+          },
+          "seg": [
+            "מילא"
+          ],
+          "lex": "מילא",
+          "morph": {
+            "token": "מילא",
+            "pos": "VERB",
+            "feats": {
+              "Gender": "Masc",
+              "Number": "Sing",
+              "Person": "3",
+              "Tense": "Past"
+            },
+            "prefixes": [],
+            "suffix": false
+          }
+        },
+        {
+          "token": "מים",
+          "offsets": {
+            "start": 9,
+            "end": 12
+          },
+          "syntax": {
+            "word": "מים",
+            "dep_head_idx": 1,
+            "dep_func": "obj",
+            "dep_head": "מילא"
+          },
+          "seg": [
+            "מים"
+          ],
+          "lex": "מים",
+          "morph": {
+            "token": "מים",
+            "pos": "NOUN",
+            "feats": {
+              "Gender": "Masc",
+              "Number": "Plur"
+            },
+            "prefixes": [],
+            "suffix": false
+          }
+        },
+        {
+          "token": "במיכל",
+          "offsets": {
+            "start": 13,
+            "end": 18
+          },
+          "syntax": {
+            "word": "במיכל",
+            "dep_head_idx": 1,
+            "dep_func": "obl",
+            "dep_head": "מילא"
+          },
+          "seg": [
+            "ב",
+            "מיכל"
+          ],
+          "lex": "מיכל",
+          "morph": {
+            "token": "במיכל",
+            "pos": "NOUN",
+            "feats": {
+              "Gender": "Masc",
+              "Number": "Sing"
+            },
+            "prefixes": [
+              "DET",
+              "ADP"
+            ],
+            "suffix": false
+          }
+        }
+      ],
+      "root_idx": 1,
+      "ner_entities": [
+        {
+          "phrase": "דני",
+          "label": "PER",
+          "start": 0,
+          "end": 3,
+          "token_start": 0,
+          "token_end": 0
+        }
+      ]
+    }
+  },
+  {
+    "label": "MH Frame B (removal)",
+    "text": "דני רוקן את המיכל ממים",
+    "prediction": {
+      "text": "דני רוקן את המיכל ממים",
+      "tokens": [
+        {
+          "token": "דני",
+          "offsets": {
+            "start": 0,
+            "end": 3
+          },
+          "syntax": {
+            "word": "דני",
+            "dep_head_idx": 1,
+            "dep_func": "nsubj",
+            "dep_head": "רוקן"
+          },
+          "seg": [
+            "דני"
+          ],
+          "lex": "דני",
+          "morph": {
+            "token": "דני",
+            "pos": "PROPN",
+            "feats": {},
+            "prefixes": [],
+            "suffix": false
+          }
+        },
+        {
+          "token": "רוקן",
+          "offsets": {
+            "start": 4,
+            "end": 8
+          },
+          "syntax": {
+            "word": "רוקן",
+            "dep_head_idx": -1,
+            "dep_func": "root",
+            "dep_head": "ממים"
+          },
+          "seg": [
+            "רוקן"
+          ],
+          "lex": "רוקן",
+          "morph": {
+            "token": "רוקן",
+            "pos": "VERB",
+            "feats": {
+              "Gender": "Masc",
+              "Number": "Sing",
+              "Person": "3",
+              "Tense": "Past"
+            },
+            "prefixes": [],
+            "suffix": false
+          }
+        },
+        {
+          "token": "את",
+          "offsets": {
+            "start": 9,
+            "end": 11
+          },
+          "syntax": {
+            "word": "את",
+            "dep_head_idx": 3,
+            "dep_func": "case:acc",
+            "dep_head": "המיכל"
+          },
+          "seg": [
+            "את"
+          ],
+          "lex": "את",
+          "morph": {
+            "token": "את",
+            "pos": "ADP",
+            "feats": {},
+            "prefixes": [],
+            "suffix": false
+          }
+        },
+        {
+          "token": "המיכל",
+          "offsets": {
+            "start": 12,
+            "end": 17
+          },
+          "syntax": {
+            "word": "המיכל",
+            "dep_head_idx": 1,
+            "dep_func": "obj",
+            "dep_head": "רוקן"
+          },
+          "seg": [
+            "ה",
+            "מיכל"
+          ],
+          "lex": "מיכל",
+          "morph": {
+            "token": "המיכל",
+            "pos": "NOUN",
+            "feats": {
+              "Gender": "Masc",
+              "Number": "Sing"
+            },
+            "prefixes": [
+              "DET"
+            ],
+            "suffix": false
+          }
+        },
+        {
+          "token": "ממים",
+          "offsets": {
+            "start": 18,
+            "end": 22
+          },
+          "syntax": {
+            "word": "ממים",
+            "dep_head_idx": 1,
+            "dep_func": "obl",
+            "dep_head": "רוקן"
+          },
+          "seg": [
+            "מ",
+            "מים"
+          ],
+          "lex": "מים",
+          "morph": {
+            "token": "ממים",
+            "pos": "NOUN",
+            "feats": {
+              "Gender": "Masc",
+              "Number": "Plur"
+            },
+            "prefixes": [
+              "ADP"
+            ],
+            "suffix": false
+          }
+        }
+      ],
+      "root_idx": 1,
+      "ner_entities": [
+        {
+          "phrase": "דני",
+          "label": "PER",
+          "start": 0,
+          "end": 3,
+          "token_start": 0,
+          "token_end": 0
+        }
+      ]
+    }
+  },
+  {
+    "label": "BH Frame B (1Kgs 6:15, unvocalized)",
+    "text": "ויצף את קרקע הבית בצלעות ברושים",
+    "prediction": {
+      "text": "ויצף את קרקע הבית בצלעות ברושים",
+      "tokens": [
+        {
+          "token": "ויצף",
+          "offsets": {
+            "start": 0,
+            "end": 4
+          },
+          "syntax": {
+            "word": "ויצף",
+            "dep_head_idx": -1,
+            "dep_func": "root",
+            "dep_head": "ברושים"
+          },
+          "seg": [
+            "ו",
+            "יצף"
+          ],
+          "lex": "[BLANK]",
+          "morph": {
+            "token": "ויצף",
+            "pos": "VERB",
+            "feats": {
+              "Gender": "Masc",
+              "Number": "Sing",
+              "Person": "3",
+              "Tense": "Fut"
+            },
+            "prefixes": [
+              "CCONJ"
+            ],
+            "suffix": false
+          }
+        },
+        {
+          "token": "את",
+          "offsets": {
+            "start": 5,
+            "end": 7
+          },
+          "syntax": {
+            "word": "את",
+            "dep_head_idx": 2,
+            "dep_func": "case:acc",
+            "dep_head": "קרקע"
+          },
+          "seg": [
+            "את"
+          ],
+          "lex": "את",
+          "morph": {
+            "token": "את",
+            "pos": "ADP",
+            "feats": {},
+            "prefixes": [],
+            "suffix": false
+          }
+        },
+        {
+          "token": "קרקע",
+          "offsets": {
+            "start": 8,
+            "end": 12
+          },
+          "syntax": {
+            "word": "קרקע",
+            "dep_head_idx": 0,
+            "dep_func": "obj",
+            "dep_head": "ויצף"
+          },
+          "seg": [
+            "קרקע"
+          ],
+          "lex": "קרקע",
+          "morph": {
+            "token": "קרקע",
+            "pos": "NOUN",
+            "feats": {
+              "Gender": "Fem",
+              "Number": "Sing"
+            },
+            "prefixes": [],
+            "suffix": false
+          }
+        },
+        {
+          "token": "הבית",
+          "offsets": {
+            "start": 13,
+            "end": 17
+          },
+          "syntax": {
+            "word": "הבית",
+            "dep_head_idx": 2,
+            "dep_func": "compound:smixut",
+            "dep_head": "קרקע"
+          },
+          "seg": [
+            "ה",
+            "בית"
+          ],
+          "lex": "בית",
+          "morph": {
+            "token": "הבית",
+            "pos": "NOUN",
+            "feats": {
+              "Gender": "Masc",
+              "Number": "Sing"
+            },
+            "prefixes": [
+              "DET"
+            ],
+            "suffix": false
+          }
+        },
+        {
+          "token": "בצלעות",
+          "offsets": {
+            "start": 18,
+            "end": 24
+          },
+          "syntax": {
+            "word": "בצלעות",
+            "dep_head_idx": 0,
+            "dep_func": "obl",
+            "dep_head": "ויצף"
+          },
+          "seg": [
+            "ב",
+            "צלעות"
+          ],
+          "lex": "[BLANK]",
+          "morph": {
+            "token": "בצלעות",
+            "pos": "NOUN",
+            "feats": {
+              "Gender": "Fem",
+              "Number": "Plur"
+            },
+            "prefixes": [
+              "ADP"
+            ],
+            "suffix": false
+          }
+        },
+        {
+          "token": "ברושים",
+          "offsets": {
+            "start": 25,
+            "end": 31
+          },
+          "syntax": {
+            "word": "ברושים",
+            "dep_head_idx": 4,
+            "dep_func": "compound:smixut",
+            "dep_head": "בצלעות"
+          },
+          "seg": [
+            "ברושים"
+          ],
+          "lex": "ברוש",
+          "morph": {
+            "token": "ברושים",
+            "pos": "NOUN",
+            "feats": {
+              "Gender": "Masc",
+              "Number": "Plur"
+            },
+            "prefixes": [],
+            "suffix": false
+          }
+        }
+      ],
+      "root_idx": 0,
+      "ner_entities": []
+    }
+  },
+  {
+    "label": "BH Frame A (Exod 28:17, vocalized)",
+    "text": "וּמִלֵּאתָ בוֹ מִלֻּאַת אֶבֶן אַרְבָּעָה טוּרִים",
+    "prediction": {
+      "text": "וּמִלֵּאתָ בוֹ מִלֻּאַת אֶבֶן אַרְבָּעָה טוּרִים",
+      "tokens": [
+        {
+          "token": "ומלאת",
+          "offsets": {
+            "start": 0,
+            "end": 9
+          },
+          "syntax": {
+            "word": "ומלאת",
+            "dep_head_idx": 2,
+            "dep_func": "conj",
+            "dep_head": "מלאת"
+          },
+          "seg": [
+            "ו",
+            "מלאת"
+          ],
+          "lex": "מלאה",
+          "morph": {
+            "token": "ומלאת",
+            "pos": "ADJ",
+            "feats": {
+              "Gender": "Fem",
+              "Number": "Sing"
+            },
+            "prefixes": [
+              "CCONJ"
+            ],
+            "suffix": false
+          }
+        },
+        {
+          "token": "בו",
+          "offsets": {
+            "start": 11,
+            "end": 13
+          },
+          "syntax": {
+            "word": "בו",
+            "dep_head_idx": 0,
+            "dep_func": "obl",
+            "dep_head": "ומלאת"
+          },
+          "seg": [
+            "בו"
+          ],
+          "lex": "בו",
+          "morph": {
+            "token": "בו",
+            "pos": "PRON",
+            "feats": {
+              "Gender": "Masc",
+              "Number": "Sing",
+              "Person": "3"
+            },
+            "prefixes": [
+              "ADP"
+            ],
+            "suffix": false
+          }
+        },
+        {
+          "token": "מלאת",
+          "offsets": {
+            "start": 15,
+            "end": 23
+          },
+          "syntax": {
+            "word": "מלאת",
+            "dep_head_idx": -1,
+            "dep_func": "root",
+            "dep_head": "טורים"
+          },
+          "seg": [
+            "מלאת"
+          ],
+          "lex": "מלאה",
+          "morph": {
+            "token": "מלאת",
+            "pos": "ADJ",
+            "feats": {
+              "Gender": "Fem",
+              "Number": "Sing"
+            },
+            "prefixes": [],
+            "suffix": false
+          }
+        },
+        {
+          "token": "אבן",
+          "offsets": {
+            "start": 24,
+            "end": 29
+          },
+          "syntax": {
+            "word": "אבן",
+            "dep_head_idx": 2,
+            "dep_func": "compound:smixut",
+            "dep_head": "מלאת"
+          },
+          "seg": [
+            "אבן"
+          ],
+          "lex": "אבן",
+          "morph": {
+            "token": "אבן",
+            "pos": "NOUN",
+            "feats": {
+              "Gender": "Fem",
+              "Number": "Sing"
+            },
+            "prefixes": [],
+            "suffix": false
+          }
+        },
+        {
+          "token": "ארבעה",
+          "offsets": {
+            "start": 30,
+            "end": 40
+          },
+          "syntax": {
+            "word": "ארבעה",
+            "dep_head_idx": 5,
+            "dep_func": "nummod",
+            "dep_head": "טורים"
+          },
+          "seg": [
+            "ארבעה"
+          ],
+          "lex": "ארבעה",
+          "morph": {
+            "token": "ארבעה",
+            "pos": "NUM",
+            "feats": {
+              "Gender": "Masc",
+              "Number": "Sing"
+            },
+            "prefixes": [],
+            "suffix": false
+          }
+        },
+        {
+          "token": "טורים",
+          "offsets": {
+            "start": 41,
+            "end": 48
+          },
+          "syntax": {
+            "word": "טורים",
+            "dep_head_idx": 0,
+            "dep_func": "compound:smixut",
+            "dep_head": "ומלאת"
+          },
+          "seg": [
+            "טורים"
+          ],
+          "lex": "טור",
+          "morph": {
+            "token": "טורים",
+            "pos": "NOUN",
+            "feats": {
+              "Gender": "Masc",
+              "Number": "Plur"
+            },
+            "prefixes": [],
+            "suffix": false
+          }
+        }
+      ],
+      "root_idx": 2,
+      "ner_entities": []
+    }
+  },
+  {
+    "label": "Rabbinic (Mishnah style)",
+    "text": "הממלא מים מן הבור בשבת",
+    "prediction": {
+      "text": "הממלא מים מן הבור בשבת",
+      "tokens": [
+        {
+          "token": "הממלא",
+          "offsets": {
+            "start": 0,
+            "end": 5
+          },
+          "syntax": {
+            "word": "הממלא",
+            "dep_head_idx": -1,
+            "dep_func": "root",
+            "dep_head": "בשבת"
+          },
+          "seg": [
+            "ה",
+            "ממלא"
+          ],
+          "lex": "ממלא",
+          "morph": {
+            "token": "הממלא",
+            "pos": "VERB",
+            "feats": {
+              "Gender": "Masc",
+              "Number": "Sing",
+              "Person": "3",
+              "Tense": "Pres"
+            },
+            "prefixes": [
+              "SCONJ"
+            ],
+            "suffix": false
+          }
+        },
+        {
+          "token": "מים",
+          "offsets": {
+            "start": 6,
+            "end": 9
+          },
+          "syntax": {
+            "word": "מים",
+            "dep_head_idx": 0,
+            "dep_func": "obj",
+            "dep_head": "הממלא"
+          },
+          "seg": [
+            "מים"
+          ],
+          "lex": "מים",
+          "morph": {
+            "token": "מים",
+            "pos": "NOUN",
+            "feats": {
+              "Gender": "Masc",
+              "Number": "Plur"
+            },
+            "prefixes": [],
+            "suffix": false
+          }
+        },
+        {
+          "token": "מן",
+          "offsets": {
+            "start": 10,
+            "end": 12
+          },
+          "syntax": {
+            "word": "מן",
+            "dep_head_idx": 3,
+            "dep_func": "case",
+            "dep_head": "הבור"
+          },
+          "seg": [
+            "מן"
+          ],
+          "lex": "מן",
+          "morph": {
+            "token": "מן",
+            "pos": "ADP",
+            "feats": {},
+            "prefixes": [],
+            "suffix": false
+          }
+        },
+        {
+          "token": "הבור",
+          "offsets": {
+            "start": 13,
+            "end": 17
+          },
+          "syntax": {
+            "word": "הבור",
+            "dep_head_idx": 0,
+            "dep_func": "obl",
+            "dep_head": "הממלא"
+          },
+          "seg": [
+            "ה",
+            "בור"
+          ],
+          "lex": "בור",
+          "morph": {
+            "token": "הבור",
+            "pos": "NOUN",
+            "feats": {
+              "Gender": "Masc",
+              "Number": "Sing"
+            },
+            "prefixes": [
+              "DET"
+            ],
+            "suffix": false
+          }
+        },
+        {
+          "token": "בשבת",
+          "offsets": {
+            "start": 18,
+            "end": 22
+          },
+          "syntax": {
+            "word": "בשבת",
+            "dep_head_idx": 0,
+            "dep_func": "obl",
+            "dep_head": "הממלא"
+          },
+          "seg": [
+            "ב",
+            "שבת"
+          ],
+          "lex": "שבת",
+          "morph": {
+            "token": "בשבת",
+            "pos": "PROPN",
+            "feats": {},
+            "prefixes": [
+              "ADP"
+            ],
+            "suffix": false
+          }
+        }
+      ],
+      "root_idx": 0,
+      "ner_entities": [
+        {
+          "phrase": "בשבת",
+          "label": "TIMEX",
+          "start": 18,
+          "end": 22,
+          "token_start": 4,
+          "token_end": 4
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,179 @@
+﻿id,lemma_bh_unvoc,lemma_bh_voc,mh_lemmas,gloss,paper_class,cluster_ab_vs_b,template,direction,notes
+1,הרים,הרים,הרים,raise,A,A/(B),Causative,putting,
+2,העלה,העלה,העלה,bring up,A,A/(B),Causative,both,Table 1 path verb; Table 3
+3,הוריד,הוריד,הוריד,bring down,A,A/(B),Causative,both,Table 1 path verb; Table 3
+4,הביא,הביא,הביא,bring in,A,A/(B),Causative,both,Table 1 path verb; Ex (20)
+5,הגיש,הגיש,הגיש,bring,A,A/(B),Causative,putting,Table 3
+6,הטיל,הטיל,הטיל,cast,A,A/(B),Causative,both,Table 1 path verb
+7,הקים,הקים,הקים,raise,A,A/(B),Causative,putting,
+8,הניח,הניח,הניח,let rest/let stay,A,A/(B),Causative,putting,Table 3
+9,השאיר,השאיר,השאיר,let remain,A,A/(B),Causative,putting,Table 3
+10,הפיץ,הפיץ,הפיץ,scatter,A,A/(B),Causative,both,Table 1 path verb; Table 3
+11,העמיד,העמיד,העמיד,station,A,A/(B),Causative,putting,Table 3
+12,הציב,הציב,הציב,position,A,A/(B),Causative,putting,Table 3
+13,הציג,הציג,הציג,set,A,A/(B),Causative,putting,
+14,הטביע,הטביע,הטביע,sink,A,A/(B),Causative,putting,Table 3
+15,הושיב,הושיב,הושיב,seat,A,A/(B),Causative,putting,fn 17
+16,השכיב,השכיב,השכיב,lay,A,A/(B),Causative,putting,fn 17
+17,הדביק,הדביק,הדביק,cling/join,A,A/(B),Causative,putting,Table 3
+18,החביא,החביא,החביא,hide,A,A/(B),Causative,putting,
+19,הסתיר,הסתיר,הסתיר,hide,A,A/(B),Causative,putting,
+20,הליט,הליט,הליט,cover,A,A/(B),Causative,putting,
+21,הניס,הניס,הניס,chase,A,A/(B),Causative,removal,
+22,האביד,האביד,האביד,make extinct,A,A/(B),Causative,removal,Table 3
+23,הבדיל,הבדיל,הבדיל,separate,A,A/(B),Causative,removal,Table 3
+24,החסיר,החסיר,החסיר,omit,A,A/(B),Causative,removal,Table 3
+25,העביר,העביר,העביר,pass/take out,A,A/(B),Causative,both,Table 1 path verb; Table 3
+26,המיש,המיש,המיש,move away,A,A/(B),Causative,removal,Table 3
+27,העתיק,העתיק,העתיק,move away,A,A/(B),Causative,removal,Table 3
+28,הגלה,הגלה,הגלה,deport,A,A/(B),Causative,both,Table 1 path verb; Table 3; Ex (6)
+29,השליך,השליך,השליך,throw away,A,A/(B),Causative,both,Table 1 path verb
+30,הדיח,הדיח,הדיח,expel/drive away,A,A/(B),Causative,both,Table 1 path verb; Table 3
+31,הוציא,הוציא,הוציא,bring out,A,A/(B),Causative,both,Table 1 path verb; Table 3
+32,הכרית,הכרית,הכרית,cut off,A,A/(B),Causative,removal,
+33,הרחיק,הרחיק,הרחיק,remove,A,A/(B),Causative,removal,
+34,הזיל,הזיל,הזיל,drip,A,A/(B),Causative,removal,Table 3
+35,הפיל,הפיל,הפיל,make fall,A,A/(B),Causative,removal,Table 3
+36,הטה,הטה,הטה,divert,A,A/(B),Causative,both,Table 1 path verb; Table 3
+37,הסב,הסב,הסב,turn,A,A/(B),Causative,both,Table 1 path verb
+38,הסיע,הסיע,הסיע,bring/move away,A,A/(B),Causative,removal,Table 3
+39,ידה,יִדָּה,יידה|ידה,cast/shoot,A,A/(B),Intensive,putting,
+40,שכן,שִׁכֵּן,שיכן|שכן,make dwell,A,A/(B),Intensive,putting,fn 16
+41,קבץ,קִבֵּץ,קיבץ|קבץ,collect,A,A/(B),Intensive,both,Table 1 path verb
+42,פזר,פִּזֵּר,פיזר|פזר,scatter,A,A/(B),Intensive,putting,
+43,זרה,זֵרָה,זרה,disperse,A,A/(B),Intensive,putting,Ex (1)
+44,נתק,נִתֵּק,ניתק|נתק,tear/disconnect,A,A/(B),Intensive,removal,
+45,בלע,בִּלַּע,בילע|בלע,swallow/destroy,A,A/(B),Intensive,removal,
+46,מלט,מִלֵּט,מילט|מלט,rescue,A,A/(B),Intensive,removal,
+47,פלט,פִּלֵּט,פילט|פלט,save,A,A/(B),Intensive,removal,
+48,גרש,גֵּרֵשׁ,גירש|גרש,drive out,A,A/(B),Intensive,removal,Ex (2)
+49,חלץ,חִלֵּץ,חילץ|חלץ,rescue,A,A/(B),Intensive,removal,
+50,נשל,נִשֵּׁל,נישל|נשל,dislodge,A,A/(B),Intensive,removal,"fn 16, fn 34, fn 39 (alternates in MH)"
+51,אסר,אסר,אסר,bind/harness,A,A/(B),Simple,putting,Paper erratum: printed in fn 33 A-Simple (making 46 vs 45 stated) AND in Ex (33) p.17 as A/B verb
+52,אצר,אצר,אצר,gather/store up,A,A/(B),Simple,putting,
+53,גלל,גלל,גלל,roll,A,A/(B),Simple,putting,fn 37 (manner verb)
+54,זרה,זרה,זרה,blow off,A,A/(B),Simple,putting,fn 7 (winnow)
+55,זרק,זרק,זרק,toss/sprinkle,A,A/(B),Simple,both,Table 1 path verb
+56,טבל,טבל,טבל,dip,A,A/(B),Simple,putting,fn 16
+57,טמן,טמן,טמן,hide,A,A/(B),Simple,putting,
+58,יצק,יצק,יצק,pour,A,A/(B),Simple,putting,
+59,לחץ,לחץ,לחץ,push,A,A/(B),Simple,putting,
+60,מרח,מרח,מרח,spread,A,A/(B),Simple,putting,
+61,נטע,נטע,נטע,plant,A,A/(B),Simple,putting,
+62,נטש,נטש,נטש,abandon,A,A/(B),Simple,putting,
+63,נפח,נפח,נפח,blow,A,A/(B),Simple,putting,Ex (3)
+64,נסך,נסך,נסך,pour,A,A/(B),Simple,putting,
+65,נתן,נתן,נתן,put/give,A,A/(B),Simple,putting,Ex (5)
+66,סחב,סחב,סחב,drag,A,A/(B),Simple,putting,fn 37 (manner verb)
+67,עזב,עזב,עזב,leave,A,A/(B),Simple,putting,
+68,פרש,פרש,פרש|פרס,stretch out,A,A/(B),Simple,putting,
+69,צפן,צפן,צפן,hide,A,A/(B),Simple,putting,
+70,צרר,צרר,צרר,wrap,A,A/(B),Simple,putting,
+71,קבר,קבר,קבר,bury,A,A/(B),Simple,putting,
+72,קרם,קרם,קרם,cover with skin,A,A/(B),Simple,putting,fn 16
+73,קשר,קשר,קשר,tie,A,A/(B),Simple,putting,
+74,שלח,שלח,שלח,send,A,A/(B),Simple,putting,Simple template; Intensive שִׁלַּח is A/B
+75,תלה,תלה,תלה,hang,A,A/(B),Simple,putting,printed 'hand' in fn 33 typo
+76,תקע,תקע,תקע,drive in,A,A/(B),Simple,putting,
+77,גנב,גנב,גנב,steal,A,A/(B),Simple,removal,
+78,גרע,גרע,גרע,take/lessen,A,A/(B),Simple,removal,
+79,דלה,דלה,דלה,draw water,A,A/(B),Simple,removal,
+80,הדף,הדף,הדף,push,A,A/(B),Simple,removal,
+81,חבל,חבל,חבל,seize a pledge,A,A/(B),Simple,removal,
+82,חלץ,חלץ,חלץ,withdraw/bare,A,A/(B),Simple,removal,
+83,כרת,כרת,כרת,cut off,A,A/(B),Simple,removal,
+84,לקח,לקח,לקח,take,A,A/(B),Simple,removal,
+85,לקט,לקט,לקט|ליקט,gather,A,A/(B),Simple,removal,
+86,מלק,מלק,מלק,pinch off,A,A/(B),Simple,removal,
+87,מצה,מצה,מצה|מיצה,wring/drain,A,A/(B),Simple,both,Table 1 path verb
+88,משה,משה,משה,draw out,A,A/(B),Simple,removal,
+89,נסח,נסח,נסח,uproot,A,A/(B),Simple,removal,fn 5
+90,נשא,נשא,נשא,bring/carry,A,A/(B),Simple,removal,Ex (69)
+91,פדה,פדה,פדה,buy out/redeem,A,A/(B),Simple,removal,
+92,קבץ,קבץ,קבץ,collect,A,A/(B),Simple,both,Table 1 path verb
+93,קטף,קטף,קטף,collect/pluck,A,A/(B),Simple,removal,
+94,שאב,שאב,שאב,draw water,A,A/(B),Simple,removal,
+95,שלף,שלף,שלף,pull off,A,A/(B),Simple,removal,
+96,שפך,שפך,שפך,spill,A,A/(B),Simple,removal,
+97,הלביש,הלביש,הלביש,clothe,A/B,A/(B),Causative,putting,Ex (29)
+98,הזה,הזה,היזה|הזה,sprinkle,A/B,A/(B),Causative,putting,Ex (30); MH Frame A only (§8.2)
+99,המטיר,המטיר,המטיר,rain upon,A/B,A/(B),Causative,putting,Ex (32)
+100,הסיר,הסיר,הסיר,remove,A/B,A/(B),Causative,removal,"Ex (4),(35); MH Frame A only (§8.2)"
+101,הפשיט,הפשיט,הפשיט,strip,A/B,A/(B),Causative,removal,Ex (52); alternates in MH (§8.2)
+102,הריק,הריק,הריק|רוקן,empty,A/B,A/(B),Causative,removal,Ex (51); MH counterpart רוקן alternates (§8.2)
+103,הקצה,הקצה,הקצה,scrape off,A/B,A/(B),Causative,removal,Ex (47)
+104,מלא,מִלֵּא,מילא|מלא,fill,A/B,A/(B),Intensive,putting,"Ex (10), fn 10, fn 13, fn 34; alternates in MH"
+105,גלח,גִּלַּח,גילח|גלח,shave,A/B,A/(B),Intensive,removal,Ex (39)
+106,חטא,חִטֵּא,חיטא|חטא,purify,A/B,A/(B),Intensive,removal,
+107,נקה,נִקָּה,ניקה|נקה,acquit/clean,A/B,A/(B),Intensive,removal,Ex (46); alternates in MH (§8.2)
+108,כבס,כִּבֵּס,כיבס|כבס,wash,A/B,A/(B),Intensive,removal,Ex (45)
+109,פנה,פִּנָּה,פינה|פנה,clear,A/B,A/(B),Intensive,removal,Ex (34); alternates in MH (§8.2)
+110,שלח,שִׁלַּח,שילח|שלח,send,A/B,A/(B),Intensive,both,"Ex (17),(31); Table 1 path verb"
+111,אסף,אסף,אסף,gather,A/B,A/(B),Simple,both,Table 1 path verb; Ex (36); MH Frame A only (§8.2)
+112,זרע,זרע,זרע,sow,A/B,A/(B),Simple,putting,Ex (23); alternates in MH (§8.2)
+113,חבש,חבש,חבש,wrap,A/B,A/(B),Simple,putting,
+114,טח,טח,טח,plaster,A/B,A/(B),Simple,putting,Ex (24)
+115,ירה,ירה,ירה,shoot,A/B,A/(B),Simple,putting,Ex (26); MH Frame A only (§8.2)
+116,משח,משח,משח,anoint,A/B,A/(B),Simple,putting,Ex (25); alternates in MH (§8.2)
+117,סכך,סכך,סכך|סיכך,thatch,A/B,A/(B),Simple,putting,Ex (28)
+118,עמס,עמס,עמס|העמיס,load,A/B,A/(B),Simple,putting,Ex (27)
+119,רגם,רגם,רגם,stone,A/B,A/(B),Simple,putting,Ex (11)
+120,שם,שם,שם,put,A/B,A/(B),Simple,putting,"Ex (5),(21),(22); MH Frame A only (§8.2)"
+121,שת,שת,שת,set,A/B,A/(B),Simple,putting,fn 9
+122,ארה,ארה,ארה,gather/pluck,A/B,A/(B),Simple,removal,
+123,בזז,בזז,בזז,plunder,A/B,A/(B),Simple,removal,Ex (48); alternates in MH (§8.2)
+124,בצר,בצר,בצר,gather grapes,A/B,A/(B),Simple,removal,Ex (37)
+125,גזז,גזז,גזז,shear,A/B,A/(B),Simple,removal,Ex (38)
+126,גזל,גזל,גזל,rob,A/B,A/(B),Simple,removal,Ex (49); MH Frame A only (§8.2)
+127,חשך,חשך,חשך,spare,A/B,A/(B),Simple,removal,Ex (54); MH Frame A only (§8.2)
+128,חשף,חשף,חשף,bare,A/B,A/(B),Simple,removal,
+129,ינק,ינק,ינק,suck,A/B,A/(B),Simple,removal,
+130,ירש,ירש,ירש,get/inherit,A/B,A/(B),Simple,removal,
+131,מחה,מחה,מחה,wipe,A/B,A/(B),Simple,removal,Ex (43); MH Frame A only (§8.2)
+132,מנע,מנע,מנע,withhold,A/B,A/(B),Simple,removal,Ex (13); alternates in MH (§8.2)
+133,מרט,מרט,מרט,pluck,A/B,A/(B),Simple,removal,Ex (40)
+134,עצר,עצר,עצר,stop,A/B,A/(B),Simple,removal,Ex (53)
+135,עשק,עשק,עשק,exploit,A/B,A/(B),Simple,removal,Ex (50)
+136,פרק,פרק,פרק,rescue/unload,A/B,A/(B),Simple,removal,Ex (12); alternates in MH (§8.2)
+137,קצר,קצר,קצר,harvest,A/B,A/(B),Simple,removal,
+138,רחץ,רחץ,רחץ,wash,A/B,A/(B),Simple,removal,Ex (41); alternates in MH (§8.2)
+139,רפא,רפא,ריפא|רפא,heal/cure,A/B,A/(B),Simple,removal,"Ex (44), fn 28 (mostly Intensive); alternates in MH"
+140,שטף,שטף,שטף,flow over/rinse,A/B,A/(B),Simple,removal,Ex (42); manner verb; alternates in MH (§8.1-8.2)
+141,שדד,שדד,שדד,rob/devastate,A/B,A/(B),Simple,removal,
+142,האכיל,האכיל,האכיל,feed,B,B,Causative,putting,Table 4 mereological
+143,השקה,השקה,השקה,water,B,B,Causative,putting,Table 4 mereological
+144,הנעיל,הנעיל,הנעיל,put footwear on someone,B,B,Causative,putting,mereological
+145,חפה,חִפָּה,חיפה|חפה,panel/overlay,B,B,Intensive,putting,mereological
+146,צפה,צִפָּה,ציפה|צפה,overlay/coat,B,B,Intensive,putting,Ex (7); mereological
+147,קרה,קֵרָה,קירה|קרה,roof with beams,B,B,Intensive,putting,mereological
+148,כסה,כִּסָּה,כיסה|כסה,cover,B,B,Intensive,putting,Ex (59); mereological
+149,עטר,עִטֵּר,עיטר|עטר,crown,B,B,Intensive,putting,"Ex (64), fn 36; locatum-incorporated"
+150,רפד,רִפֵּד,ריפד|רפד,lay (a bed),B,B,Intensive,putting,mereological
+151,גשם,גִּשֵּׁם,גישם|גשם,rain,B,B,Intensive,putting,Ex (63); locatum-incorporated
+152,ישב,יִשֵּׁב,יישב|ישב,populate,B,B,Intensive,putting,mereological
+153,דשן,דִּשֵּׁן,דישן|דשן,oil/take away fatty ashes,B,B,Intensive,both,Ex (67); locatum-incorporated
+154,סקל,סִקֵּל,סיקל|סקל,hurl stones/clear of stones,B,B,Intensive,both,Ex (66); locatum-incorporated
+155,שרש,שֵׁרֵשׁ,שירש|שרש,take/lose root,B,B,Intensive,both,"Ex (68), fn 5; locatum-incorporated"
+156,טמא,טִמֵּא,טימא|טמא,defile,B,B,Intensive,putting,Ex (60); mereological
+157,טהר,טִהֵר,טיהר|טהר,cleanse/purify,B,B,Intensive,removal,"Ex (57), fn 32; mereological"
+158,קדש,קִדֵּשׁ,קידש|קדש,sanctify/cleanse,B,B,Intensive,removal,Ex (56); mereological
+159,חסר,חִסֵּר,חיסר|חסר,deprive,B,B,Intensive,removal,"Ex (8),(55); mereological"
+160,אזר,אזר,אזר,gird,B,B,Simple,putting,Table 4 mereological
+161,גדר,גדר,גדר|גידר,fence up,B,B,Simple,putting,"Ex (65), fn 36; locatum-incorporated"
+162,חגר,חגר,חגר,gird,B,B,Simple,putting,Table 4 mereological; fn 38 (alternates in MH)
+163,טען,טען,טען,load,B,B,Simple,putting,
+164,כחל,כחל,כחל,put on makeup,B,B,Simple,putting,Ex (61); locatum-incorporated
+165,כפר,כפר,כפר,tar,B,B,Simple,putting,Ex (61b); locatum-incorporated
+166,נעל,נעל,נעל,put on footwear,B,B,Simple,putting,mereological
+167,סך,סך,סך,anoint,B,B,Simple,putting,
+168,סבב,סבב,סבב|סובב,surround,B,B,Simple,putting,Table 4 mereological
+169,ספן,ספן,ספן,cover,B,B,Simple,putting,mereological
+170,סתם,סתם,סתם,shut/obstruct,B,B,Simple,putting,
+171,עדה,עדה,עדה,adorn,B,B,Simple,putting,Table 4 mereological
+172,עטה,עטה,עטה,mantle,B,B,Simple,putting,mereological
+173,רבד,רבד,רבד,prepare a couch,B,B,Simple,putting,mereological
+174,שך,שך,שך,hedge,B,B,Simple,putting,fn 36
+175,גמל,גמל,גמל,wean,B,B,Simple,removal,Ex (58); mereological
+176,זמר,זמר,זמר|זימר,prune,B,B,Simple,removal,
+177,זר,זר,זר,squeeze,B,B,Simple,removal,
+178,שחט,שחט,שחט|סחט,squeeze,B,B,Simple,removal,BH orthography שחט = MH סחט
