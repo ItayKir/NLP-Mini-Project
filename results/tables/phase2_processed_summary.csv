@@ -1,0 +1,17 @@
+period,subcorpus,files_available,files_read,sents_extracted,boilerplate_removed,sents_kept,words_kept,avg_words_per_sent,max_words_per_sent,sampling_mode,output_file
+Mikra,tanakh,39,39,23204,0,23204,306388,13.2,43,100% full,data/processed/mikra__tanakh.parquet
+Hazal,mishnah,63,63,17972,0,17972,191915,10.68,118,100% full,data/processed/hazal__mishnah.parquet
+Hazal,tosefta,61,61,7828,0,7828,295197,37.71,120,100% full,data/processed/hazal__tosefta.parquet
+Hazal,midrash_tannaitic,5,5,28581,0,20000,299646,14.98,120,"stratified (20,000)",data/processed/hazal__midrash_tannaitic.parquet
+Hazal,midrash_aggadah,21,21,137312,0,20000,455613,22.78,120,"stratified (20,000)",data/processed/hazal__midrash_aggadah.parquet
+Medieval,rambam,1091,1091,14973,0,14973,691442,46.18,120,100% full,data/processed/medieval__rambam.parquet
+Medieval,musar,22,22,29941,0,20000,467919,23.4,120,"stratified (20,000)",data/processed/medieval__musar.parquet
+Medieval,thought,12,12,57591,0,20000,636624,31.83,120,"stratified (20,000)",data/processed/medieval__thought.parquet
+Haskala,haskala,320,320,258470,0,60000,1247866,20.8,120,"stratified (60,000)",data/processed/haskala__haskala.parquet
+Modern,news,3000,3000,55024,71,20000,427795,21.39,120,"stratified (20,000)",data/processed/modern__news.parquet
+Modern,literary_original,1,1,35174,0,10000,198412,19.84,108,"stratified (10,000)",data/processed/modern__literary_original.parquet
+Modern,literary_translated,1,1,42092,0,10000,170138,17.01,100,"stratified (10,000)",data/processed/modern__literary_translated.parquet
+Modern,tapuz,255,255,47890,5150,20000,323040,16.15,109,"stratified (20,000)",data/processed/modern__tapuz.parquet
+Modern,blogs,11176,2000,85875,178,20000,271806,13.59,109,"stratified (20,000)",data/processed/modern__blogs.parquet
+Modern,medical,12750,3000,39056,535,20000,283475,14.17,88,"stratified (20,000)",data/processed/modern__medical.parquet
+Modern,kneset,282,120,334241,18890,20000,375619,18.78,109,"stratified (20,000)",data/processed/modern__kneset.parquet

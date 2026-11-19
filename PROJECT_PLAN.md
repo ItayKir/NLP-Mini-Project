@@ -12,7 +12,7 @@
 | :--- | :---: | :---: | :--- |
 | **Phase 0:** Environment & Repo Setup | Setup | ✅ Completed | Clean repo structure, `.venv`, local offline `dictabert-tiny-joint`, smoke test + CPU benchmark |
 | **Phase 1:** Literature Review & Theoretical Background | §1.1, §1.2 | ✅ Completed | [literature_review_doron_dubnov.md](report/literature_review_doron_dubnov.md), [literature_review_background.md](report/literature_review_background.md), [doron_dubnov_177_verbs.csv](data/curated/doron_dubnov_177_verbs.csv) |
-| **Phase 2:** Corpora Acquisition & Preprocessing | §2 | ⬜ Not Started | Downloaded, verified, normalized 5-period corpora |
+| **Phase 2:** Corpora Acquisition & Preprocessing | §2 | ✅ Completed | 16 normalized Parquet shards (`data/processed/`, 323,977 sents / 6.65M words) + raw & processed audit tables |
 | **Phase 3:** Automated Parsing with DictaBERT | §3 | ⬜ Not Started | Parsed corpora (morphology + dependency trees) saved to disk |
 | **Phase 4:** Diachronic & Genre Corpus Statistics | §4 | ⬜ Not Started | Statistical tables, plots, tree-depth & linguistic analysis |
 | **Phase 5:** Testing Doron & Dubnov's Central Claims | §5 | ⬜ Not Started | 177-verb extraction, Frame A/B & preposition identity results (BH + all corpora) |
@@ -104,16 +104,16 @@ Mini Project/
 ---
 
 ### Phase 2: Corpora Acquisition & Preprocessing (§2)
-- [ ] Download the corpora archive from the [Google Drive link](https://drive.google.com/file/d/1M3vAm4Aqm8uaFZyqwIwk0r6KNtFYb1_E/view?usp=sharing) into `data/raw/`.
-- [ ] Audit folder structure, file formats, character encodings (UTF-8), and verify all 5 historical layers & sub-corpora are present:
-  - [ ] **Biblical (מקרא):** Tanakh (התנ"ך)
-  - [ ] **Rabbinic (חז"ל):** Mishnah (משנה), Tosefta (תוספתא), Tannaitic Midrashim (מדרשים תנאיים), Midrashim (מדרשים)
-  - [ ] **Medieval (ימי הביניים):** Rambam's Mishneh Torah (משנה תורה לרמב"ם), Philosophical books (ספרי מחשבה), Ethical/Musar books (ספרי מוסר)
-  - [ ] **Haskalah (ספרות ההשכלה)**
-  - [ ] **Modern Hebrew (עברית מודרנית):** News (ידיעות חדשותיות), Literature — original & translated (ספרות מקור ומתורגמת), Tapuz Forum (פורום תפוז), Blogs (בלוגים), Medical texts (טקסטים רפואיים), Knesset protocols (פרוטוקולי הכנסת)
-- [ ] Inspect text cleanliness: presence of niqqud, cantillation marks (te'amim), XML/HTML tags, verse/sentence boundaries, duplicate lines, and extreme-length sentences (>512 subword tokens).
-- [ ] Write `src/corpora/preprocess.py` to normalize all sub-corpora into a uniform JSONL/Parquet format (`corpus_period`, `subcorpus`, `doc_id`, `sent_id`, `text_raw`, `text_clean`).
-- [ ] Log raw corpus counts (documents, sentences/verses, rough token counts) to estimate parsing runtime.
+- [x] Download and extract the corpora archive (`corpora.rar`, 478 MB compressed / 1.13 GB uncompressed, 404,294 files, ~186.5M words) into `data/raw/extracted/` via `src/corpora/download_corpora.py` + 7-Zip.
+- [x] Audit folder structure, file formats, character encodings, and verify all 5 historical layers & sub-corpora (`src/corpora/audit_raw.py` -> `results/tables/phase2_raw_audit.json`):
+  - [x] **Biblical (מקרא):** Tanakh (39 books, UTF-8, niqqud + te'amim)
+  - [x] **Rabbinic (חז"ל):** Mishnah (63), Tosefta (61), Tannaitic Midrashim (`Midrash - Halakhah`, 5), Aggadic Midrashim (21 primary works; late Medieval commentaries separated out)
+  - [x] **Medieval (ימי הביניים):** Rambam's Mishneh Torah (1,091), Musar (22), Thought (12 primary works)
+  - [x] **Haskala (ספרות ההשכלה):** 320 works (UTF-8)
+  - [x] **Modern Hebrew (עברית מודרנית — all `cp1255`):** News (378k `.txt` across 5 outlets; 99 `.log` excluded), Literature (`O.txt` original + `T.txt` translated), Tapuz Forum (255), Blogs (11,176), Medical (12,750), Knesset protocols (282)
+- [x] Inspect text cleanliness and handle encoding (`utf-8-sig` vs. `cp1255`), niqqud/te'amim stripping, Mikra maqaf normalization, HTML/markup/`[IMG]` removal, Tapuz cross-doc boilerplate deduplication, and Hebrew sentence splitting (`<=120` words/sent).
+- [x] Write and run `src/corpora/preprocess.py` producing 16 uniform Parquet shards in `data/processed/` (**323,977 sentences**, **6,646,770 words** — 100% of Tanakh, Mishnah, Tosefta, and Rambam + deterministic stratified samples with `seed=42` for the multi-million-word sub-corpora).
+- [x] Log corpus counts and local CPU parse estimate (`~132 min` total at 41 sent/s) in `results/tables/phase2_processed_summary.csv`.
 
 ---
 
@@ -302,3 +302,4 @@ Design and execute concrete, empirically evaluated uses of Dicta's LLMs ([DictaB
 | 2026-11-19 | Phase 0 | Completed repo scaffold, `.gitignore`, `requirements.txt`, `.venv` (Python 3.11.5, PyTorch 2.15.0+cpu, Transformers 4.57.6). Downloaded self-contained `dicta-il/dictabert-tiny-joint` + `BertForJointParsing` code to `models/dictabert-tiny-joint` (offline load: 0.45s). |
 | 2026-11-19 | Phase 0 | Smoke test (`src/parsing/smoke_test.py`) benchmarked **~41.1 sent/s** on local CPU (6 threads, `batch_size=32`). Key schema & linguistic findings: (1) prepositions appear either as standalone `ADP`/`case` tokens (`מן הבור`) or as cliticized prefixes in `seg` + `morph.prefixes=['ADP']` (`במים` -> `seg=('ב','מים')`, `בו` -> `pos='PRON', pref=['ADP']`); (2) DictaBERT strips niqqud internally, which can cause BH domain-shift errors (e.g., `וּמִלֵּאתָ` misparsed as `ADJ` `מלאה`, and archaic `ויצף` getting `lex='[BLANK]'`); (3) keeping `do_ner=True` tags temporal adjuncts like `בשבת` as `TIMEX`, which will help filter non-locative `ב-` adjuncts in §5–§6. |
 | 2026-11-19 | Phase 1 | Completed literature reviews (`report/literature_review_doron_dubnov.md`, `report/literature_review_background.md` with 34 verified scholarly references) and digitized Doron & Dubnov's full BH locative verb database via `src/locative/build_doron_dubnov_lexicon.py` -> `data/curated/doron_dubnov_177_verbs.csv` (178 rows: 96 A [38 Caus, 12 Int, 46 Simp], 45 A/B [7 Caus, 7 Int, 31 Simp], 37 B [3 Caus, 15 Int, 19 Simp], explicitly documenting the paper's fn. 33 erratum where `אסר` appears both in Ex. 33 as A/B and in fn. 33 under A-Simple, and adding Modern Hebrew plene lemma variants for Phase 5 matching). |
+| 2026-11-19 | Phase 2 | Downloaded & extracted `corpora.rar` (478 MB / 404,294 files / 1.13 GB / ~186.5M words). Audit (`results/tables/phase2_raw_audit.json`) revealed critical encoding split (`utf-8-sig` for historical strata vs. `cp1255` for all 6 Modern Hebrew genres), 99 non-text `.log` files in `Modern/news`, repeated banner boilerplate in `tapuz`, and late commentaries bundled in `Hazal/Midrash` & `Medieval/Thought`. Built 16 clean Parquet shards in `data/processed/` via `src/corpora/preprocess.py` (323,977 sentences, 6.65M words: 100% of Tanakh [23,204 verses], Mishnah, Tosefta, and Rambam + deterministic `seed=42` stratified samples of larger sub-corpora; est. local CPU parse time ~2.2 hrs). |
