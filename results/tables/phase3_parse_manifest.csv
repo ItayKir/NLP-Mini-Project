@@ -8,4 +8,10 @@ medieval__musar,parsed,5000,131839,6.019,5.574,78.73,63.51
 medieval__rambam,parsed,5000,226910,8.044,4.986,124.25,40.24
 medieval__thought,parsed,5000,172288,6.945,4.988,97.76,51.15
 mikra__tanakh,parsed,23204,337598,5.09,7.938,1624.4,14.28
+modern__blogs,parsed,5000,70423,4.373,2.195,46.74,106.98
+modern__kneset,parsed,5000,96425,5.384,1.406,52.55,95.15
+modern__literary_original,parsed,2500,50746,5.743,2.475,25.43,98.32
+modern__literary_translated,parsed,2500,43474,5.17,3.581,27.17,92.0
+modern__medical,parsed,5000,73393,5.064,2.544,46.96,106.48
 modern__news,parsed,5000,109594,5.99,2.475,53660.37,0.09
+modern__tapuz,parsed,5000,95019,5.23,3.528,80.68,61.98

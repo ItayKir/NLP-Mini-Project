@@ -13,7 +13,7 @@
 | **Phase 0:** Environment & Repo Setup | Setup | ✅ Completed | Clean repo structure, `.venv`, local offline `dictabert-tiny-joint`, smoke test + CPU benchmark |
 | **Phase 1:** Literature Review & Theoretical Background | §1.1, §1.2 | ✅ Completed | [literature_review_doron_dubnov.md](report/literature_review_doron_dubnov.md), [literature_review_background.md](report/literature_review_background.md), [doron_dubnov_177_verbs.csv](data/curated/doron_dubnov_177_verbs.csv) |
 | **Phase 2:** Corpora Acquisition & Preprocessing | §2 | ✅ Completed | 16 normalized Parquet shards (`data/processed/`, 323,977 sents / 6.65M words) + raw & processed audit tables |
-| **Phase 3:** Automated Parsing with DictaBERT | §3 | 🟨 In Progress | `mikra__tanakh` parsed (23,204 verses / 337,598 tokens); 15 shards remaining |
+| **Phase 3:** Automated Parsing with DictaBERT | §3 | ✅ Completed | All 16 shards parsed & verified (108,204 sents / 2,404,191 tokens / 35.34 MB ZSTD Parquet) |
 | **Phase 4:** Diachronic & Genre Corpus Statistics | §4 | ⬜ Not Started | Statistical tables, plots, tree-depth & linguistic analysis |
 | **Phase 5:** Testing Doron & Dubnov's Central Claims | §5 | ⬜ Not Started | 177-verb extraction, Frame A/B & preposition identity results (BH + all corpora) |
 | **Phase 6:** Expanding Scope to All Verbs | §6 | ⬜ Not Started | Full-corpus verb classification & characterization of new alternating verbs |
@@ -124,13 +124,13 @@ Mini Project/
   - [x] Per-shard resumable execution with atomic `.parquet` commits and manifest (`results/tables/phase3_parse_manifest.csv`).
   - [x] Structured columnar Parquet output (`__sents.parquet` + `__tokens.parquet`) with `lex`, `pos`, `seg`, `prefixes`, `has_suffix`/`suffix_type`/`suffix_feats`, `gender`/`number`/`person`/`tense`/`feats_json`, `dep_head_idx`, `dep_func`, `ner`, `tree_depth`, and `mean_dep_dist`.
 - [x] Validate parser outputs on sample sentences across periods (Phase 0 smoke test + suffix inspection).
-- [ ] Run parser across all 5 periods and all sub-corpora:
-  - [x] Biblical Hebrew (`mikra__tanakh`: 23,204 verses, 337,598 tokens, 27.1 min, avg depth 5.09, `BLANK` lex 7.94%)
-  - [ ] Rabbinic Hebrew (4 sub-corpora)
-  - [ ] Medieval Hebrew (3 sub-corpora)
-  - [ ] Haskalah Literature
-  - [ ] Modern Hebrew (6 genres)
-- [ ] Perform post-parse integrity checks (0 corrupted files, valid tree roots/no cycles, token alignment sanity checks).
+- [x] Run parser across all 5 periods and all sub-corpora (Balanced Stratified Parse: **108,204 sentences**, **2,404,191 tokens**):
+  - [x] Biblical Hebrew (`mikra__tanakh`: 23,204 verses, 337,598 tokens, avg depth 5.09, `BLANK` 7.94%)
+  - [x] Rabbinic Hebrew (4 sub-corpora: 20,000 sents, 497,881 tokens — `mishnah`, `tosefta`, `midrash_tannaitic`, `midrash_aggadah`)
+  - [x] Medieval Hebrew (3 sub-corpora: 15,000 sents, 531,037 tokens — `rambam`, `musar`, `thought`)
+  - [x] Haskalah Literature (`haskala__haskala`: 20,000 sents, 498,601 tokens)
+  - [x] Modern Hebrew (6 genres / 7 shards: 30,000 sents, 539,074 tokens — `news`, `literary_original`, `literary_translated`, `tapuz`, `blogs`, `medical`, `kneset`)
+- [x] Perform post-parse integrity checks (all 16 `__sents`/`__tokens` pairs verified: exact token count alignment, 35.34 MB total, **99.982%** single-root trees).
 
 ---
 
@@ -303,3 +303,4 @@ Design and execute concrete, empirically evaluated uses of Dicta's LLMs ([DictaB
 | 2026-11-19 | Phase 0 | Smoke test (`src/parsing/smoke_test.py`) benchmarked **~41.1 sent/s** on local CPU (6 threads, `batch_size=32`). Key schema & linguistic findings: (1) prepositions appear either as standalone `ADP`/`case` tokens (`מן הבור`) or as cliticized prefixes in `seg` + `morph.prefixes=['ADP']` (`במים` -> `seg=('ב','מים')`, `בו` -> `pos='PRON', pref=['ADP']`); (2) DictaBERT strips niqqud internally, which can cause BH domain-shift errors (e.g., `וּמִלֵּאתָ` misparsed as `ADJ` `מלאה`, and archaic `ויצף` getting `lex='[BLANK]'`); (3) keeping `do_ner=True` tags temporal adjuncts like `בשבת` as `TIMEX`, which will help filter non-locative `ב-` adjuncts in §5–§6. |
 | 2026-11-19 | Phase 1 | Completed literature reviews (`report/literature_review_doron_dubnov.md`, `report/literature_review_background.md` with 34 verified scholarly references) and digitized Doron & Dubnov's full BH locative verb database via `src/locative/build_doron_dubnov_lexicon.py` -> `data/curated/doron_dubnov_177_verbs.csv` (178 rows: 96 A [38 Caus, 12 Int, 46 Simp], 45 A/B [7 Caus, 7 Int, 31 Simp], 37 B [3 Caus, 15 Int, 19 Simp], explicitly documenting the paper's fn. 33 erratum where `אסר` appears both in Ex. 33 as A/B and in fn. 33 under A-Simple, and adding Modern Hebrew plene lemma variants for Phase 5 matching). |
 | 2026-11-19 | Phase 2 | Downloaded & extracted `corpora.rar` (478 MB / 404,294 files / 1.13 GB / ~186.5M words). Audit (`results/tables/phase2_raw_audit.json`) revealed critical encoding split (`utf-8-sig` for historical strata vs. `cp1255` for all 6 Modern Hebrew genres), 99 non-text `.log` files in `Modern/news`, repeated banner boilerplate in `tapuz`, and late commentaries bundled in `Hazal/Midrash` & `Medieval/Thought`. Built 16 clean Parquet shards in `data/processed/` via `src/corpora/preprocess.py` (323,977 sentences, 6.65M words: 100% of Tanakh [23,204 verses], Mishnah, Tosefta, and Rambam + deterministic `seed=42` stratified samples of larger sub-corpora; est. local CPU parse time ~2.2 hrs). |
+| 2026-11-28 | Phase 3 | Completed full Balanced Stratified Parse across all 16 shards (**108,204 sentences**, **2,404,191 tokens**, 35.34 MB ZSTD Parquet, 99.982% single-root MST trees; `results/tables/phase3_parse_manifest.csv`). Fixed a critical memory/speed bottleneck in local `BertForJointParsing.py` (`torch.argsort(..., descending=True)[..., :topk]` over 128k vocab -> `torch.topk(..., k=topk).indices`, 100% equivalent) + dynamic word-budget batching (`max_words_per_batch=512`), boosting long-sentence speed >1,000x (30 min -> 1.75s per 32 long sents; up to 107 sent/s on Modern shards). Early domain-shift finding: `[BLANK]` lemma rate drops monotonically from 7.94% (Mikra) -> 5.45% (Haskala) -> ~5.1% (Medieval) -> ~4.9% (Hazal) -> 1.41–3.58% (Modern). |
