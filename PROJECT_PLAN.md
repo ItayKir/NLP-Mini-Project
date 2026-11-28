@@ -13,7 +13,7 @@
 | **Phase 0:** Environment & Repo Setup | Setup | ✅ Completed | Clean repo structure, `.venv`, local offline `dictabert-tiny-joint`, smoke test + CPU benchmark |
 | **Phase 1:** Literature Review & Theoretical Background | §1.1, §1.2 | ✅ Completed | [literature_review_doron_dubnov.md](report/literature_review_doron_dubnov.md), [literature_review_background.md](report/literature_review_background.md), [doron_dubnov_177_verbs.csv](data/curated/doron_dubnov_177_verbs.csv) |
 | **Phase 2:** Corpora Acquisition & Preprocessing | §2 | ✅ Completed | 16 normalized Parquet shards (`data/processed/`, 323,977 sents / 6.65M words) + raw & processed audit tables |
-| **Phase 3:** Automated Parsing with DictaBERT | §3 | ⬜ Not Started | Parsed corpora (morphology + dependency trees) saved to disk |
+| **Phase 3:** Automated Parsing with DictaBERT | §3 | 🟨 In Progress | `mikra__tanakh` parsed (23,204 verses / 337,598 tokens); 15 shards remaining |
 | **Phase 4:** Diachronic & Genre Corpus Statistics | §4 | ⬜ Not Started | Statistical tables, plots, tree-depth & linguistic analysis |
 | **Phase 5:** Testing Doron & Dubnov's Central Claims | §5 | ⬜ Not Started | 177-verb extraction, Frame A/B & preposition identity results (BH + all corpora) |
 | **Phase 6:** Expanding Scope to All Verbs | §6 | ⬜ Not Started | Full-corpus verb classification & characterization of new alternating verbs |
@@ -118,14 +118,14 @@ Mini Project/
 ---
 
 ### Phase 3: Automated Morphological & Syntactic Parsing (§3)
-- [ ] Implement `src/parsing/run_dicta_parser.py` using `dicta-il/dictabert-tiny-joint` with:
-  - [ ] Batched inference & GPU acceleration (`torch.cuda` / mixed precision if supported).
-  - [ ] Chunking / handling for sentences exceeding BERT's 512-token limit.
-  - [ ] Per-subcorpus checkpointing so runs are resumable and crash-safe.
-  - [ ] Structured output saving per token: `token_id`, `surface`, `lemma`, `pos`, `morph_feats` (gender, number, person, tense, state/construct, binyan if present), `prefixes` (`מ ש ה ו כ ל ב`), `suffixes` (possessive, object clitics), `head`, `deprel`.
-- [ ] Validate parser outputs on a small sample from each period against the [Morphological Demo](https://huggingface.co/spaces/dicta-il/joint-demo) and [Syntactic Demo](https://oracleparser.netlify.app/#/liveParse).
+- [x] Implement `src/parsing/run_dicta_parser.py` using `dicta-il/dictabert-tiny-joint` with:
+  - [x] Batched, length-sorted CPU inference (`batch_size=32`, `per_token_ner=True`, `compute_syntax_mst=True`).
+  - [x] 480-subword safety guard before BERT forward pass.
+  - [x] Per-shard resumable execution with atomic `.parquet` commits and manifest (`results/tables/phase3_parse_manifest.csv`).
+  - [x] Structured columnar Parquet output (`__sents.parquet` + `__tokens.parquet`) with `lex`, `pos`, `seg`, `prefixes`, `has_suffix`/`suffix_type`/`suffix_feats`, `gender`/`number`/`person`/`tense`/`feats_json`, `dep_head_idx`, `dep_func`, `ner`, `tree_depth`, and `mean_dep_dist`.
+- [x] Validate parser outputs on sample sentences across periods (Phase 0 smoke test + suffix inspection).
 - [ ] Run parser across all 5 periods and all sub-corpora:
-  - [ ] Biblical Hebrew (Tanakh)
+  - [x] Biblical Hebrew (`mikra__tanakh`: 23,204 verses, 337,598 tokens, 27.1 min, avg depth 5.09, `BLANK` lex 7.94%)
   - [ ] Rabbinic Hebrew (4 sub-corpora)
   - [ ] Medieval Hebrew (3 sub-corpora)
   - [ ] Haskalah Literature

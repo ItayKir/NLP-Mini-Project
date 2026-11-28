@@ -1,0 +1,11 @@
+﻿shard,status,n_sents,n_tokens,avg_tree_depth,blank_lex_pct,elapsed_sec,sents_per_sec
+haskala__haskala,parsed,20000,498601,5.55,5.452,318.69,62.76
+hazal__midrash_aggadah,parsed,5000,134707,5.845,4.899,79.66,62.76
+hazal__midrash_tannaitic,parsed,5000,93079,5.006,3.96,58.58,85.35
+hazal__mishnah,parsed,5000,67646,4.518,4.773,279.2,17.91
+hazal__tosefta,parsed,5000,202449,7.624,5.773,2536.31,1.97
+medieval__musar,parsed,5000,131839,6.019,5.574,78.73,63.51
+medieval__rambam,parsed,5000,226910,8.044,4.986,124.25,40.24
+medieval__thought,parsed,5000,172288,6.945,4.988,97.76,51.15
+mikra__tanakh,parsed,23204,337598,5.09,7.938,1624.4,14.28
+modern__news,parsed,5000,109594,5.99,2.475,53660.37,0.09
